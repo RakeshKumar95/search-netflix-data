@@ -13,6 +13,9 @@ Assigment:
 Technology Used:
 	Java 16, Spring Boot, MySQL, JPA/Hibernate
 
+Download and run the sql file from here[assessment.zip](https://github.com/RakeshKumar95/search-netflix-data/files/7088322/assessment.zip)
+Dataset used: https://www.kaggle.com/shivamb/netflix-shows
+
 Note: 
 	- There are two apis 
 		GET /data/{pageIndex}/{pageSize}
@@ -53,14 +56,14 @@ Building Query:
 		
 		
 Ex: Call Made
-	POST http://localhost:8080/data/search
-	Body : 
-		{
-			"pageIndex": 0,
-			"pageSize": 30,
-			"query" : "S-description%\"romance\",D-dateAdded>\"December 24, 2010\",S-type%\"Movie\"",
-			"sorts": ["dateAdded", "releaseYear"]
-		}
+	POST http://localhost:8080/data/search 
+					  Body : 
+							{
+								"pageIndex": 0,
+								"pageSize": 30,
+								"query" : "S-description%\"romance\",D-dateAdded>\"December 24, 2010\",S-type%\"Movie\"",
+								"sorts": ["dateAdded", "releaseYear"]
+							}
 		
 	Result: 
 		{
